@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Solutions | SAP, AI Agents &amp; Supply Chain | Körber Stellium</title>
+  <meta name="description"
+    content="Körber Stellium solutions: SAP digital supply chain, AI assistants and agents, Cloud ERP, RPA, test automation, SAP BTP and data and analytics.">
+  <link rel="canonical" href="https://koerber-stellium.com/our-solutions/">
+  <meta property="og:title" content="Our Solutions | Körber Stellium">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://koerber-stellium.com/our-solutions/">
+  <style>
+    /* Layout: replica of koerber-stellium.com/our-solutions/ — white header, photo hero, image-left/copy-right rows on light grey, black footer */
+    :root {
+      --blue: #0060FF;
+      --ink: #000;
+      --paper: #fff;
+      --grey: #F7F7F7;
+      --cream: #F5F3F1;
+      --sand: #E6E2DC;
+      --pebble: #BFB8AF;
+      --stone: #9D968D;
+      --muted: rgba(0, 0, 0, .68);
+      --line: rgba(0, 0, 0, .12);
+      --sans: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      color-scheme: light
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.55
+    }
+
+    a {
+      color: inherit
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 3px
+    }
+
+    .wrap {
+      max-width: 1520px;
+      margin: 0 auto;
+      padding-left: max(16px, env(safe-area-inset-left, 0px));
+      padding-right: max(16px, env(safe-area-inset-right, 0px))
+    }
+
+    header {
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line)
+    }
+
+    header .wrap {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding-block: 22px
+    }
+
+    header .logo img {
+      height: 50px;
+      width: auto;
+      display: block
+    }
+
+    nav.main {
+      display: flex;
+      gap: 44px;
+      font-size: 19px;
+      margin-left: 110px
+    }
+
+    nav.main a {
+      text-decoration: none;
+      white-space: nowrap
+    }
+
+    nav.main a.on {
+      color: var(--blue)
+    }
+
+    nav.main a:hover {
+      color: var(--blue)
+    }
+
+    .search {
+      margin-left: auto;
+      width: 250px;
+      height: 50px;
+      border: 1px solid #ccc;
+      border-radius: 26px;
+      display: flex;
+      align-items: center;
+      padding-left: 14px;
+      color: #555
+    }
+
+    .rq {
+      width: 190px;
+      height: 74px;
+      border: 2px solid var(--blue);
+      border-radius: 40px;
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 19px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      line-height: 1.05;
+      text-decoration: none
+    }
+
+    .rq:hover {
+      background: var(--blue);
+      color: #fff
+    }
+
+    @media (max-width:1700px) {
+      nav.main {
+        margin-left: 20px;
+        gap: 30px
+      }
+    }
+
+    @media (max-width:1250px) {
+      nav.main {
+        margin-left: 0;
+        gap: 24px;
+        font-size: 17px
+      }
+
+      .search {
+        display: none
+      }
+
+      .rq {
+        margin-left: auto
+      }
+    }
+
+    @media (max-width:900px) {
+      nav.main {
+        display: none
+      }
+
+      .rq {
+        width: auto;
+        height: auto;
+        padding: 12px 18px;
+        font-size: 15px
+      }
+
+      header .logo img {
+        height: 36px
+      }
+    }
+
+    .hero {
+      position: relative;
+      min-height: 420px;
+      display: flex;
+      align-items: flex-end;
+      color: #fff;
+      overflow: hidden;
+      background: linear-gradient(120deg, #0a1a3a, #0060FF)
+    }
+
+    .hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(0, 0, 0, .62), rgba(0, 0, 0, .15))
+    }
+
+    .hero .wrap {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding-block: 0 72px
+    }
+
+    .hero .wrap>div {
+      max-width: 1340px;
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    .hero p {
+      font-size: 20px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin: 0 0 12px;
+      font-weight: 700
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 5vw, 72px);
+      font-weight: 400;
+      margin: 0;
+      letter-spacing: -.5px
+    }
+
+    .intro {
+      background: var(--grey)
+    }
+
+    .intro .wrap {
+      padding-block: 56px 8px
+    }
+
+    .intro p {
+      max-width: 1340px;
+      margin: 0 auto;
+      font-size: 20px;
+      color: var(--muted)
+    }
+
+    .sol-sec {
+      background: var(--grey)
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: minmax(0, 599px) minmax(0, 1fr);
+      gap: 66px;
+      align-items: center;
+      padding-block: 48px;
+      max-width: 1372px
+    }
+
+    .pic {
+      margin: 0;
+      aspect-ratio: 599/525;
+      max-width: 100%;
+      border-radius: 26px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(135deg, var(--sand), var(--pebble))
+    }
+
+    .pic::before {
+      content: attr(data-ph);
+      position: absolute;
+      left: 20px;
+      bottom: 18px;
+      font-size: 14px;
+      color: rgba(0, 0, 0, .55);
+      letter-spacing: .04em;
+      text-transform: uppercase
+    }
+
+    .pic img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block
+    }
+
+    .pic.ai {
+      background: var(--blue)
+    }
+
+    .copy {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start
+    }
+
+    .copy h2 {
+      font-size: clamp(34px, 3.6vw, 63px);
+      font-weight: 400;
+      line-height: 1.1;
+      margin: 0 0 30px;
+      letter-spacing: -.5px;
+      text-wrap: balance
+    }
+
+    .copy .tag {
+      font-size: 23px;
+      margin: 0 0 22px
+    }
+
+    .copy .sol {
+      font-size: 24px;
+      line-height: 1.5;
+      margin: 0 0 40px;
+      max-width: 880px
+    }
+
+    .copy .sol a {
+      text-decoration: none
+    }
+
+    .copy .sol a:hover {
+      color: var(--blue);
+      text-decoration: underline
+    }
+
+    .new {
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 18px
+    }
+
+    .lm {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      background: var(--blue);
+      color: #fff;
+      font-size: 24px;
+      padding: 19px 26px;
+      border-radius: 36px;
+      text-decoration: none
+    }
+
+    .lm:hover {
+      background: var(--ink)
+    }
+
+    @media (max-width:900px) {
+      .row {
+        grid-template-columns: 1fr;
+        gap: 28px
+      }
+
+      .copy .tag {
+        font-size: 19px
+      }
+
+      .copy .sol {
+        font-size: 18px;
+        margin-bottom: 28px
+      }
+
+      .lm {
+        font-size: 19px;
+        padding: 14px 22px
+      }
+    }
+
+    .talk {
+      background: var(--blue);
+      color: #fff
+    }
+
+    .talk .wrap {
+      padding-block: 72px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1372px
+    }
+
+    .talk h2 {
+      font-size: clamp(34px, 3.6vw, 56px);
+      font-weight: 400;
+      margin: 0 0 12px
+    }
+
+    .talk p {
+      margin: 0;
+      font-size: 20px;
+      max-width: 60ch;
+      color: rgba(255, 255, 255, .85)
+    }
+
+    .talk a {
+      background: #fff;
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 20px;
+      padding: 18px 28px;
+      border-radius: 36px;
+      text-decoration: none
+    }
+
+    footer {
+      background: var(--ink);
+      color: #fff;
+      font-size: 15px
+    }
+
+    footer .wrap {
+      max-width: 1372px;
+      padding-block: 64px 28px;
+      display: grid;
+      grid-template-columns: 1.2fr 2.2fr 1fr 1fr;
+      gap: 40px
+    }
+
+    footer h4 {
+      font-size: 13px;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      color: var(--pebble);
+      margin: 0 0 14px
+    }
+
+    footer ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 9px
+    }
+
+    footer a {
+      text-decoration: none
+    }
+
+    footer a:hover {
+      text-decoration: underline
+    }
+
+    footer .logo img {
+      height: 40px
+    }
+
+    .offices {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px 28px
+    }
+
+    .offices b {
+      display: block;
+      margin-bottom: 4px
+    }
+
+    .offices span {
+      color: var(--pebble);
+      font-size: 14px;
+      line-height: 1.5
+    }
+
+    .social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px
+    }
+
+    .social a {
+      border: 1px solid rgba(255, 255, 255, .3);
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 13px
+    }
+
+    .legal {
+      grid-column: 1/-1;
+      border-top: 1px solid rgba(255, 255, 255, .18);
+      padding-top: 20px;
+      color: var(--pebble);
+      font-size: 13px
+    }
+
+    @media (max-width:1000px) {
+      footer .wrap {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .offices {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media (max-width:600px) {
+      footer .wrap {
+        grid-template-columns: 1fr
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <a class="logo" href="https://koerber-stellium.com/"><img src="logo-black.png" alt="Körber Stellium" width="240"
+          height="50"></a>
+      <nav class="main" aria-label="Main"><a href="https://koerber-stellium.com/who-is-korber-stellium/">About us</a><a
+          href="https://koerber-stellium.com/our-services/">Services</a><a class="on"
+          href="./our-solutions.html">Solutions</a><a
+          href="https://koerber-stellium.com/insights-events/">Insights &amp; events</a><a
+          href="https://koerber-stellium.com/careers-at-stellium/">Careers</a></nav>
+      <div class="search" role="search" aria-label="Search"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2.6">
+          <circle cx="10" cy="10" r="7" />
+          <path d="M15.5 15.5 21 21" />
+        </svg></div>
+      <a class="rq" href="https://koerber-stellium.com/contact-us/">Request a<br>Demo</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero"><img
+        src="https://koerber-stellium.com/wp-content/uploads/2026/03/Parcel-on-a-conveyor-belt-1-1-1.webp" alt=""
+        onerror="this.remove()">
+      <div class="wrap">
+        <div>
+          <p>Intelligent, integrated solutions</p>
+          <h1>Our solutions</h1>
+        </div>
+      </div>
+    </section>
+    <section class="sol-sec" id="s0">
+      <div class="wrap row">
+        <figure class="pic" data-ph="Warehouse conveyor"><img
+            src="https://koerber-stellium.com/wp-content/uploads/2026/03/Parcel-on-a-conveyor-belt-1-1-1.webp"
+            alt="Warehouse conveyor" loading="eager" width="599" height="525" onerror="this.remove()"></figure>
+        <div class="copy">
+          <h2>SAP digital supply chain</h2>
+          <p class="tag">Fixing Supply Chains: Smarter, Faster, and Built for the Future</p>
+          <p class="sol"><b>Solutions:</b> <a
+              href="https://koerber-stellium.com/our-solutions/sap-digital-supply-chain/sap-integrated-business-planning/">SAP
+              Integrated Business Planning</a> | <a
+              href="https://koerber-stellium.com/our-solutions/sap-digital-supply-chain/sap-digital-manufacturing/">SAP
+              Digital Manufacturing</a> | <a
+              href="https://koerber-stellium.com/our-solutions/sap-digital-supply-chain/sap-extended-warehouse-management/">SAP
+              Extended Warehouse Management</a> | <a
+              href="https://koerber-stellium.com/our-solutions/sap-digital-supply-chain/sap-transportation-management/">SAP
+              Transportation Management</a> | <a
+              href="https://koerber-stellium.com/our-solutions/sap-digital-supply-chain/sap-global-trade-services-gts/">SAP
+              Global Trade Services</a> | <a
+              href="https://koerber-stellium.com/our-solutions/sap-digital-supply-chain/yard-logistics/">SAP Yard
+              Logistics</a> | <a
+              href="https://koerber-stellium.com/our-solutions/sap-digital-supply-chain/sap-business-network-for-logistics/">SAP
+              Business Network for Logistics</a> | <a
+              href="https://koerber-stellium.com/our-solutions/sap-digital-supply-chain/sap-manufacturing-integration-and-intelligence-mii/">SAP
+              Manufacturing Integration and Intelligence</a></p>
+          <a class="lm" href="https://koerber-stellium.com/our-solutions/sap-digital-supply-chain/">Learn more <svg
+              width="26" height="18" viewBox="0 0 30 22" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M1 11h27M18 1l10 10-10 10" />
+            </svg></a>
+        </div>
+      </div>
+    </section>
+    <section class="sol-sec" id="s1">
+      <div class="wrap row">
+        <figure class="pic ai"><img src="media/ai-assistants-agents.jpg"
+            alt="AI assistants and agents monitoring, recommending and acting on supply chain decisions" loading="eager"
+            width="599" height="525" onerror="this.remove()"></figure>
+        <div class="copy"><span class="new">New</span>
+          <h2>AI assistants &amp; agents</h2>
+          <p class="tag">Let AI agents run supply chain decisions with your team</p>
+          <p class="sol"><b>Solutions:</b> AI Assistants | AI Agents | Intelligent Process Automation |
+            Human-in-the-loop Decisions</p>
+          <a class="lm" href="index.html">Learn more <svg width="26" height="18" viewBox="0 0 30 22" fill="none"
+              stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M1 11h27M18 1l10 10-10 10" />
+            </svg></a>
+        </div>
+      </div>
+    </section>
+    <section class="sol-sec" id="s2">
+      <div class="wrap row">
+        <figure class="pic" data-ph="Warehouse worker with tablet"><img
+            src="https://koerber-stellium.com/wp-content/uploads/2026/03/male-warehouse-worker-working-for-check-and-analyz-2026-01-09-07-33-05-utc-1-4-1.webp"
+            alt="Warehouse worker with tablet" loading="lazy" width="599" height="525" onerror="this.remove()"></figure>
+        <div class="copy">
+          <h2>Cloud ERP</h2>
+          <p class="tag">Scalable, Integrated ERP Solutions for Streamlined Business Operations</p>
+          <p class="sol"><b>Solutions:</b> <a
+              href="https://koerber-stellium.com/our-solutions/cloud-erp/sap-s4-hana/">SAP S/4 HANA</a> | <a
+              href="https://koerber-stellium.com/our-solutions/cloud-erp/sap-s-4-hana-cloud-public-edition/">SAP S/4
+              HANA Cloud, Public edition</a> | <a
+              href="https://koerber-stellium.com/our-solutions/cloud-erp/sap-s-4-hana-cloud-private-edition/">SAP S/4
+              HANA Cloud, Private edition</a> | <a
+              href="https://koerber-stellium.com/our-solutions/cloud-erp/sap-signavio/">SAP Signavio</a></p>
+          <a class="lm" href="https://koerber-stellium.com/our-solutions/cloud-erp/">Learn more <svg width="26"
+              height="18" viewBox="0 0 30 22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M1 11h27M18 1l10 10-10 10" />
+            </svg></a>
+        </div>
+      </div>
+    </section>
+    <section class="sol-sec" id="s3">
+      <div class="wrap row">
+        <figure class="pic" data-ph="Automated logistics center"><img
+            src="https://koerber-stellium.com/wp-content/uploads/2026/03/automated-warehouse-logistics-center-with-autonomo-2026-02-09-19-49-38-utc-1-2-1.webp"
+            alt="Automated logistics center" loading="lazy" width="599" height="525" onerror="this.remove()"></figure>
+        <div class="copy">
+          <h2>Robotic process automation (RPA)</h2>
+          <p class="tag">Intelligent Automation for Next-Level SAP Efficiency</p>
+          <p class="sol"><b>Solutions:</b> <a
+              href="https://koerber-stellium.com/our-solutions/robotic-process-automation-rpa/automation-anywhere/">Automation
+              Anywhere</a></p>
+          <a class="lm" href="https://koerber-stellium.com/our-solutions/robotic-process-automation-rpa/">Learn more
+            <svg width="26" height="18" viewBox="0 0 30 22" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M1 11h27M18 1l10 10-10 10" />
+            </svg></a>
+        </div>
+      </div>
+    </section>
+    <section class="sol-sec" id="s4">
+      <div class="wrap row">
+        <figure class="pic" data-ph="Testing team"><img
+            src="https://koerber-stellium.com/wp-content/uploads/2026/03/case-studies-v01-20250904-1-1.webp"
+            alt="Testing team" loading="lazy" width="599" height="525" onerror="this.remove()"></figure>
+        <div class="copy">
+          <h2>Test automation</h2>
+          <p class="tag">Achieve Comprehensive Test Coverage with Advanced Test Management Software</p>
+          <p class="sol"><b>Solutions:</b> <a
+              href="https://koerber-stellium.com/our-solutions/test-automation/tricentis/">Tricentis</a></p>
+          <a class="lm" href="https://koerber-stellium.com/our-solutions/test-automation/">Learn more <svg width="26"
+              height="18" viewBox="0 0 30 22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M1 11h27M18 1l10 10-10 10" />
+            </svg></a>
+        </div>
+      </div>
+    </section>
+    <section class="sol-sec" id="s5">
+      <div class="wrap row">
+        <figure class="pic" data-ph="Warehouse team"><img
+            src="https://koerber-stellium.com/wp-content/uploads/2026/03/warehouse-inventory-worker-happy-working-together-2026-01-08-07-59-04-utc-1-3-1.webp"
+            alt="Warehouse team" loading="lazy" width="599" height="525" onerror="this.remove()"></figure>
+        <div class="copy">
+          <h2>SAP business technology platform</h2>
+          <p class="tag">Empowering Supply Chain to New Heights with SAP BTP</p>
+          <a class="lm" href="https://koerber-stellium.com/our-solutions/sap-business-technology-platform/">Learn more
+            <svg width="26" height="18" viewBox="0 0 30 22" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M1 11h27M18 1l10 10-10 10" />
+            </svg></a>
+        </div>
+      </div>
+    </section>
+    <section class="sol-sec" id="s6">
+      <div class="wrap row">
+        <figure class="pic" data-ph="Analytics dashboard"><img
+            src="https://koerber-stellium.com/wp-content/uploads/2026/03/computer-screen-trading-and-back-with-charts-hom-2026-01-09-10-22-12-utc-1-3.webp"
+            alt="Analytics dashboard" loading="lazy" width="599" height="525" onerror="this.remove()"></figure>
+        <div class="copy">
+          <h2>Data &amp; analytics</h2>
+          <p class="tag">Transform data into Action with Powerful Analytics Solutions</p>
+          <p class="sol"><b>Solutions:</b> <a
+              href="https://koerber-stellium.com/our-solutions/data-analytics/sap-business-data-cloud/">SAP Business
+              Data Cloud</a> | <a
+              href="https://koerber-stellium.com/our-solutions/data-analytics/sap-analytics-cloud/">SAP Analytics
+              Cloud</a> | <a href="https://koerber-stellium.com/our-solutions/data-analytics/sap-datasphere/">SAP
+              Datasphere</a> | <a href="https://koerber-stellium.com/our-solutions/data-analytics/sap-bw-4-hana/">SAP
+              BW/4 HANA</a> | <a
+              href="https://koerber-stellium.com/our-solutions/sap-digital-supply-chain/sap-master-data-governancemdg/">SAP
+              Master Data Governance</a></p>
+          <a class="lm" href="https://koerber-stellium.com/our-solutions/data-analytics/">Learn more <svg width="26"
+              height="18" viewBox="0 0 30 22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M1 11h27M18 1l10 10-10 10" />
+            </svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <section class="talk">
+    <div class="wrap">
+      <div>
+        <h2>Talk to us</h2>
+        <p>Contact us today to discover how Körber Stellium innovative solutions drive high-performance business
+          operations and transformative growth.</p>
+      </div><a href="https://koerber-stellium.com/contact-us/">Request a demo</a>
+    </div>
+  </section>
+  <footer>
+    <div class="wrap">
+      <div><a class="logo" href="https://koerber-stellium.com/"><img src="logo-white.png" alt="Körber Stellium"
+            width="190" height="40"></a>
+        <div class="social"><a href="https://www.linkedin.com/company/koerber-stellium/">LinkedIn</a><a href="#">X</a><a
+            href="#">Instagram</a><a href="#">YouTube</a><a href="#">Facebook</a></div>
+      </div>
+      <div class="offices">
+        <div><b>India</b><span>Stellium Consulting India Pvt. Ltd.<br>WeWork Prestige Central Workspace # 117, 2nd
+            Floor, Infantry Rd, Tasker Town, Shivaji Nagar, Bengaluru – 560001, Karnataka</span></div>
+        <div><b>USA</b><span>10700 Richmond Ave., Ste 208, Houston, TX 77042</span></div>
+        <div><b>Canada</b><span>Stellium Consulting INC.<br>7030, Woodbine Avenue, Suite 500, Markham, Ontario, Canada,
+            L3R6G2</span></div>
+        <div><b>Dubai</b><span>Stellium L.L.C-F.Z<br>Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba, Dubai,
+            UAE</span></div>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="https://koerber-stellium.com/who-is-korber-stellium/">Who is Körber Stellium</a></li>
+          <li><a href="https://koerber-stellium.com/stellium-give/">Körber Stellium GIVE</a></li>
+          <li><a href="https://koerber-stellium.com/careers-at-stellium/">Careers</a></li>
+          <li><a href="https://koerber-stellium.com/insights-events/">Insights &amp; events</a></li>
+          <li><a href="https://koerber-stellium.com/disclosures-disclaimer-stelliuminc/">Disclosures</a></li>
+          <li><a href="https://www.koerber.com/en">Visit Körber</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="https://koerber-stellium.com/blogs/">Blogs</a></li>
+          <li><a href="https://koerber-stellium.com/casestudies/">Case Studies</a></li>
+          <li><a href="https://koerber-stellium.com/whitepapers/">White Papers</a></li>
+          <li><a href="https://koerber-stellium.com/faq/">FAQs</a></li>
+        </ul>
+      </div>
+      <p class="legal">© 2026 Körber Stellium. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
