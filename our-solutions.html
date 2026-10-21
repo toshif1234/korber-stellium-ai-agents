@@ -11,6 +11,7 @@
   <meta property="og:title" content="Our Solutions | Körber Stellium">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://koerber-stellium.com/our-solutions/">
+  <style rel="stylesheet" href="./styles.css"></style>
   <style>
     /* Layout: replica of koerber-stellium.com/our-solutions/ — white header, photo hero, image-left/copy-right rows on light grey, black footer */
     :root {
@@ -30,15 +31,6 @@
 
     * {
       box-sizing: border-box
-    }
-
-    body {
-      margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: var(--sans);
-      font-size: 16px;
-      line-height: 1.55
     }
 
     a {
@@ -154,20 +146,104 @@
       }
     }
 
-    @media (max-width:900px) {
+    .menu {
+      display: none;
+      position: relative;
+      order: 3
+    }
+
+    .menu summary {
+      list-style: none;
+      cursor: pointer;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center
+    }
+
+    .menu summary::-webkit-details-marker {
+      display: none
+    }
+
+    .menu nav {
+      position: absolute;
+      right: 0;
+      top: 56px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, .14);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      min-width: 240px
+    }
+
+    .menu nav a {
+      padding: 12px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 17px
+    }
+
+    .menu nav a:hover,
+    .menu nav a.on {
+      background: var(--grey);
+      color: var(--blue)
+    }
+
+    .menu nav .cta {
+      background: var(--blue);
+      color: #fff;
+      text-align: center;
+      margin-top: 6px;
+      font-weight: 700
+    }
+
+    @media (max-width:1024px) {
       nav.main {
         display: none
       }
 
+      .menu {
+        display: block
+      }
+
       .rq {
+        margin-left: auto;
         width: auto;
         height: auto;
-        padding: 12px 18px;
-        font-size: 15px
+        padding: 12px 20px;
+        font-size: 16px
+      }
+
+      .rq br {
+        display: none
       }
 
       header .logo img {
-        height: 36px
+        height: 40px
+      }
+
+      header .wrap {
+        gap: 14px;
+        padding-block: 16px
+      }
+    }
+
+    @media (max-width:520px) {
+      .rq {
+        display: none
+      }
+
+      .menu {
+        margin-left: auto
+      }
+
+      header .logo img {
+        height: 34px
       }
     }
 
@@ -351,24 +427,107 @@
       background: var(--ink)
     }
 
-    @media (max-width:900px) {
+    @media (max-width:1280px) {
       .row {
-        grid-template-columns: 1fr;
-        gap: 28px
+        gap: 44px
       }
 
       .copy .tag {
-        font-size: 19px
+        font-size: 20px
       }
 
       .copy .sol {
-        font-size: 18px;
-        margin-bottom: 28px
+        font-size: 20px
       }
 
       .lm {
-        font-size: 19px;
+        font-size: 21px;
+        padding: 16px 24px
+      }
+    }
+
+    @media (max-width:1024px) {
+      .row {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+        gap: 32px;
+        padding-block: 36px
+      }
+
+      .copy h2 {
+        margin-bottom: 18px
+      }
+
+      .copy .tag {
+        font-size: 18px;
+        margin-bottom: 14px
+      }
+
+      .copy .sol {
+        font-size: 17px;
+        margin-bottom: 24px
+      }
+
+      .lm {
+        font-size: 18px;
+        padding: 13px 22px;
+        gap: 12px
+      }
+
+      .hero {
+        min-height: 320px
+      }
+
+      .hero .wrap {
+        padding-block: 0 48px
+      }
+
+      .hero p {
+        font-size: 16px
+      }
+    }
+
+    @media (max-width:760px) {
+      .row {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding-block: 28px
+      }
+
+      .pic {
+        border-radius: 18px
+      }
+
+      .copy .sol {
+        font-size: 16px
+      }
+
+      .hero {
+        min-height: 260px
+      }
+
+      .hero .wrap {
+        padding-block: 0 36px
+      }
+
+      .hero p {
+        font-size: 13px
+      }
+
+      .talk .wrap {
+        padding-block: 48px
+      }
+
+      .talk p {
+        font-size: 17px
+      }
+
+      .talk a {
+        font-size: 17px;
         padding: 14px 22px
+      }
+
+      .new {
+        font-size: 12px
       }
     }
 
@@ -492,21 +651,7 @@
       font-size: 13px
     }
 
-    @media (max-width:1000px) {
-      footer .wrap {
-        grid-template-columns: 1fr 1fr
-      }
-
-      .offices {
-        grid-template-columns: 1fr
-      }
-    }
-
-    @media (max-width:600px) {
-      footer .wrap {
-        grid-template-columns: 1fr
-      }
-    }
+   
   </style>
 </head>
 
@@ -520,12 +665,24 @@
           href="./our-solutions.html">Solutions</a><a
           href="https://koerber-stellium.com/insights-events/">Insights &amp; events</a><a
           href="https://koerber-stellium.com/careers-at-stellium/">Careers</a></nav>
+      <details class="menu">
+        <summary aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.2">
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg></summary>
+        <nav aria-label="Mobile"><a href="https://koerber-stellium.com/who-is-korber-stellium/">About us</a><a
+            href="https://koerber-stellium.com/our-services/">Services</a><a class="on"
+            href="https://koerber-stellium.com/our-solutions/">Solutions</a><a
+            href="https://koerber-stellium.com/insights-events/">Insights &amp; events</a><a
+            href="https://koerber-stellium.com/careers-at-stellium/">Careers</a><a class="cta"
+            href="https://koerber-stellium.com/contact-us/">Request a Demo</a></nav>
+      </details>
       <div class="search" role="search" aria-label="Search"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="2.6">
           <circle cx="10" cy="10" r="7" />
           <path d="M15.5 15.5 21 21" />
         </svg></div>
-      <a class="rq" href="https://koerber-stellium.com/contact-us/">Request a<br>Demo</a>
+      <a class="rq" href="https://koerber-stellium.com/contact-us/">Request a <br>Demo</a>
     </div>
   </header>
   <main>
